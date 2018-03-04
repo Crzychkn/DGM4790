@@ -15,7 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test', function () {
-    return view('test');
+Route::get('generic', function () {
+    return view('generic');
+});
+
+Route::get('elements', function () {
+    return view('elements');
 });
 
