@@ -43139,7 +43139,7 @@ if (false) {
 /* 42 */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed: ModuleBuildError: Module build failed: Error: write EPIPE\n    at WriteWrap.afterWrite [as oncomplete] (net.js:860:14)\n    at runLoaders (/var/www/html/massive/node_modules/webpack/lib/NormalModule.js:195:19)\n    at /var/www/html/massive/node_modules/loader-runner/lib/LoaderRunner.js:364:11\n    at /var/www/html/massive/node_modules/loader-runner/lib/LoaderRunner.js:230:18\n    at context.callback (/var/www/html/massive/node_modules/loader-runner/lib/LoaderRunner.js:111:13)\n    at /var/www/html/massive/node_modules/img-loader/index.js:45:31\n    at <anonymous>");
+// removed by extract-text-webpack-plugin
 
 /***/ })
 /******/ ]);
