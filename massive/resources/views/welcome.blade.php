@@ -163,7 +163,8 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-							<form method="post" action="#">
+							<form method="post" action="/message">
+                        {{ csrf_field() }}
 								<div class="field">
 									<label for="name">Name</label>
 									<input type="text" name="name" id="name" />
