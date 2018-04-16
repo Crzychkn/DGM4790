@@ -9,12 +9,8 @@ class MessageController extends Controller
 {
    public function store()
    {
-      $message = new Message;
-
-      $message->name = request('name');
-      $message->email = request('email');
-      $message->message = request('message');
-      $message->save();
+   
+      Message::create(request(['name', 'email', 'message']));
 
       return redirect('/');
    }
