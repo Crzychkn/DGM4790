@@ -62,6 +62,15 @@
                         </div>
 
                         <div class="form-group">
+                            <label for="isAdmin" class="col-md-4 control-label">Select User Type</label>
+
+                            <div class="col-md-6">
+                            <label class="radio-inline"><input type="radio" checked="true" name="userType" value="0">User</label>
+<label class="radio-inline"><input type="radio" name="userType" value="1">Admin</label>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
                                     Register
