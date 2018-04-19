@@ -11,7 +11,7 @@
     <title>Shop Homepage - ROCKED</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="css/app.css" rel="stylesheet">
+    <link href="/css/app.css" rel="stylesheet">
 
 
   </head>
@@ -20,7 +20,11 @@
 
 @include ('layouts.nav')
 
+<div class="container">
+
 @yield ('content')
+
+</div>
 
 @include ('layouts.footer')
 

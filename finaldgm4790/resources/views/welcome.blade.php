@@ -1,8 +1,6 @@
 @extends ('layout')
 
 @section ('content')
-    <!-- Page Content -->
-    <div class="container">
 
       <div class="row">
 
@@ -92,8 +90,4 @@
 
       </div>
       <!-- /.row -->
-
-    </div>
-    <!-- /.container -->
-
 @endsection

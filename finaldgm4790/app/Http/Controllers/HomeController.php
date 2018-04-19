@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -23,6 +24,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+       $userId = \Auth::id();
+       $user = User::find($userId);
+
+       if ($user->isAdmin == 1) {
+         return view('admin');
+       }
+        return view('user');
     }
 }
