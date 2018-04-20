@@ -2,6 +2,8 @@
 
 @section('content')
 
-Admin Stuff Here
+Item 3 Details
+
+Include form here
 
 @endsection

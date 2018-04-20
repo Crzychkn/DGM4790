@@ -37,48 +37,39 @@
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="{{ asset('storage/item1.jpg') }}" alt=""></a>
+                <a href="/item1"><img class="card-img-top" src="{{ asset('storage/item1.jpg') }}" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item One</a>
+                    <a href="/item1">Rock Buddies</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Spicy jalapeno bacon ipsum dolor amet pork loin capicola bresaola t-bone pastrami ham hock turkey pork belly.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  <h5>$34.99</h5>
+                  <p class="card-text">These multi-colored rock friends come in groups of five, each with a unique color. Note: May become emotional if separated.</p>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="{{ asset('storage/item2.jpg') }}" alt=""></a>
+                <a href="/item2"><img class="card-img-top" src="{{ asset('storage/item2.jpg') }}" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Two</a>
+                    <a href="/item2">Best Friend Rocks</a>
                   </h4>
                   <h5>$24.99</h5>
-                  <p class="card-text">Spicy jalapeno bacon ipsum dolor amet pork loin capicola bresaola t-bone pastrami ham hock turkey pork belly.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  <p class="card-text">These best friend rocks are pretty dumb looking. They will work for cheap. Note: Do not speak English.</p>
                 </div>
               </div>
             </div>
 
             <div class="col-lg-4 col-md-6 mb-4">
               <div class="card h-100">
-                <a href="#"><img class="card-img-top" src="{{ asset('storage/item3.jpg') }}" alt=""></a>
+                <a href="item3"><img class="card-img-top" src="{{ asset('storage/item3.jpg') }}" alt=""></a>
                 <div class="card-body">
                   <h4 class="card-title">
-                    <a href="#">Item Three</a>
+                    <a href="item3">Custom Created Rocks</a>
                   </h4>
-                  <h5>$24.99</h5>
-                  <p class="card-text">Spicy jalapeno bacon ipsum dolor amet pork loin capicola bresaola t-bone pastrami ham hock turkey pork belly.</p>
-                </div>
-                <div class="card-footer">
-                  <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                  <h5>$14.99 - $100+</h5>
+                  <p class="card-text">We can custom create orders for you! Put in your order now! We know what you want without even needing to ask!</p>
                 </div>
               </div>
             </div>

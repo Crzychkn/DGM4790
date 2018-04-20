@@ -8,13 +8,8 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="/">Home
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Cart</a>
+            <li class="nav-item ">
+              <a class="nav-link" href="/">Shop</a>
             </li>
             </ul>
 
@@ -25,6 +20,12 @@
                             <li class="nav-item"><a class="nav-link" href="{{ route('login') }}">Login</a></li>
                             <li class="nav-item"><a class="nav-link" href="{{ route('register') }}">Register</a></li>
                         @else
+
+                           @if (Auth::user()->isAdmin == 1)
+                           <li class="nav-item">
+                              <a class="nav-link" href="/home">Orders</a>
+                           </li>
+                           @endif
                             <li class="dropdown nav-item">
                                 <a href="#" class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
