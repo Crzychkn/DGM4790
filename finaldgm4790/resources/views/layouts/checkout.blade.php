@@ -1,35 +1,27 @@
-
-<!doctype html>
-<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
     <!-- Custom styles for this template -->
     <link href="/css/form-validation.css" rel="stylesheet">
   </head>
 
-  <body class="bg-light">
-
-    <div class="container">
-
       <div class="row">
         <div class="col-md-12 order-md-1">
           <h4 class="mb-3">Billing address</h4>
-          <form class="needs-validation" novalidate>
+          <form method="POST" action="/order" class="needs-validation" novalidate>
+            {{ csrf_field() }}
             <div class="row">
               <div class="col-md-6 mb-3">
-                <label for="firstName">First name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                <label for="first">First name</label>
+                <input type="text" class="form-control" name="first" id="first" placeholder="John" required>
                 <div class="invalid-feedback">
                   Valid first name is required.
                 </div>
               </div>
               <div class="col-md-6 mb-3">
                 <label for="lastName">Last name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                <input type="text" class="form-control" name="last" id="last" placeholder="Smith" required>
                 <div class="invalid-feedback">
                   Valid last name is required.
                 </div>
@@ -38,7 +30,7 @@
 
             <div class="mb-3">
               <label for="address">Address</label>
-              <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+              <input type="text" class="form-control" name="address" id="address" placeholder="1234 Main St" required>
               <div class="invalid-feedback">
                 Please enter your shipping address.
               </div>
@@ -46,21 +38,30 @@
 
             <div class="mb-3">
               <label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-              <input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
+              <input type="text" class="form-control" name="address2" id="address2" placeholder="Apartment or suite">
             </div>
 
             <div class="row">
+               <div class="col-md-4 mb-3">
+                <label for="state">City</label>
+
+              <input type="text" class="form-control" name="city" id="city" placeholder="Orem" required>
+              <div class="invalid-feedback">
+                  Please provide a valid city.
+                </div>
+              </div>
+
               <div class="col-md-4 mb-3">
                 <label for="state">State</label>
 
-              <input type="text" class="form-control" id="state" placeholder="UT" required>
+              <input type="text" class="form-control" name="state" id="state" placeholder="UT" required>
               <div class="invalid-feedback">
                   Please provide a valid state.
                 </div>
               </div>
               <div class="col-md-3 mb-3">
                 <label for="zip">Zip</label>
-                <input type="text" class="form-control" id="zip" placeholder="" required>
+                <input type="text" class="form-control" name="zip" id="zip" placeholder="84123" required>
                 <div class="invalid-feedback">
                   Zip code required.
                 </div>
@@ -87,20 +88,6 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-3 mb-3">
-                <label for="cc-expiration">Expiration</label>
-                <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
-                <div class="invalid-feedback">
-                  Expiration date required
-                </div>
-              </div>
-              <div class="col-md-3 mb-3">
-                <label for="cc-expiration">CVV</label>
-                <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
-                <div class="invalid-feedback">
-                  Security code required
-                </div>
-              </div>
             </div>
             <hr class="mb-4">
             <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
@@ -132,6 +119,4 @@
         }, false);
       })();
     </script>
-  </body>
-</html>
 

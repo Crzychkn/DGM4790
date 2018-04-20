@@ -28,7 +28,6 @@
                   </tr>
                </tbody>
             </table>
-
 @include ('layouts.checkout')
 
 @endsection

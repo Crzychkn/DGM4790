@@ -16,18 +16,26 @@ Route::get('/', function () {
 });
 
 Route::get('/item1', function() {
+    session()->put('order', '1');
     return view('item1');
    });
 
 Route::get('/item2', function() {
+    session()->put('order', '2');
     return view('item2');
    });
 
 Route::get('/item3', function() {
+    session()->put('order', '3');
     return view('item3');
    });
+
+Route::get('/thanks', function() {
+   return view('thanks');
+});
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::post('/order', 'OrderController@store');
