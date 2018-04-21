@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-md-12 order-md-1">
           <h4 class="mb-3">Billing address</h4>
-          <form method="POST" action="/order" class="needs-validation" novalidate>
+          <form onsubmit="return validateCC()" method="POST" action="/order" class="needs-validation" novalidate>
             {{ csrf_field() }}
             <input type="hidden" name="item" value="{{ session()->get('item') }}">
             <input type="hidden" name="price" value="{{session()->get('price') }}">
@@ -80,7 +80,7 @@
               <div class="col-md-6 mb-3">
                 <label for="cc-number">Credit card number</label>
                 <input type="text" class="form-control" id="cc-number" placeholder="" required>
-                <div class="invalid-feedback">
+                <div class="invalid-feedback" id="validatecc">
                   Credit card number is required
                 </div>
               </div>
@@ -107,6 +107,7 @@
           // Loop over them and prevent submission
           var validation = Array.prototype.filter.call(forms, function(form) {
             form.addEventListener('submit', function(event) {
+
               if (form.checkValidity() === false) {
                 event.preventDefault();
                 event.stopPropagation();
@@ -116,5 +117,24 @@
           });
         }, false);
       })();
+
+      function validateCC() {
+             var x = document.getElementById('cc-number').value;
+             if (x == '4111111111111111') {
+                alert("Payment Failed.");
+                return false;
+             }
+             else if (x == '5105105105105100')
+             {
+                return true;
+             }
+             else
+             {
+                alert("Invalid Credit Card Number");
+                return false;
+             }
+      }
+
+
     </script>
 
