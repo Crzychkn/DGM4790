@@ -16,17 +16,20 @@ Route::get('/', function () {
 });
 
 Route::get('/item1', function() {
-    session()->put('order', '1');
+    session()->put('item', '1');
+    session()->put('price', '34.99');
     return view('item1');
    });
 
 Route::get('/item2', function() {
-    session()->put('order', '2');
+    session()->put('item', '2');
+    session()->put('price', '24.99');
     return view('item2');
    });
 
 Route::get('/item3', function() {
-    session()->put('order', '3');
+    session()->put('item', '3');
+    session()->put('price', '100+');
     return view('item3');
    });
 

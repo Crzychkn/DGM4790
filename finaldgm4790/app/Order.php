@@ -7,5 +7,5 @@ use App\Order;
 
 class Order extends Model
 {
-    protected $fillable = ['first', 'last', 'address', 'city', 'state', 'zip'];
+    protected $fillable = ['first', 'last', 'item', 'price', 'address', 'city', 'state', 'zip'];
 }

@@ -1,8 +1,4 @@
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Custom styles for this template -->
     <link href="/css/form-validation.css" rel="stylesheet">
   </head>
 
@@ -11,6 +7,8 @@
           <h4 class="mb-3">Billing address</h4>
           <form method="POST" action="/order" class="needs-validation" novalidate>
             {{ csrf_field() }}
+            <input type="hidden" name="item" value="{{ session()->get('item') }}">
+            <input type="hidden" name="price" value="{{session()->get('price') }}">
             <div class="row">
               <div class="col-md-6 mb-3">
                 <label for="first">First name</label>

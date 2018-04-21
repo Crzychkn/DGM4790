@@ -7,9 +7,16 @@
 <p>{{ session()->get( 'address' ) }}</p>
 <p>{{ session()->get( 'city' ) }}, {{ session()->get( 'state' ) }} {{ session()->get( 'zip' ) }}
 </p>
-<p>Item: </p>
-<p>Order Total: </p>
+<p>Item: 
+@if ( session('item') == 1)
+Rock Buddies
+@elseif ( session('item') == 2)
+Item 2
+@elseif ( session('item') == 3)
+Item 3
+@endif
 
-{{ session('order') }}
+</p>
+<p>Order Total: ${{ session()->get( 'price' ) }}</p>
 
 @endsection

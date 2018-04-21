@@ -17,7 +17,8 @@ class CreateOrdersTable extends Migration
             $table->increments('id');
             $table->string('first')->nullable();
             $table->string('last')->nullable();
-            $table->integer('order')->nullable();
+            $table->integer('item')->nullable();
+            $table->string('price');
             $table->string('address')->nullable();
             $table->string('city')->nullable();
             $table->string('state')->nullable();
