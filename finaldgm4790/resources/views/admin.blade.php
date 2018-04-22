@@ -2,6 +2,10 @@
 
 @section('content')
 
-Admin Stuff Here
+@foreach ($orders as $order)
+
+<li> {{$order->first}} </li>
+
+@endforeach
 
 @endsection

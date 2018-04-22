@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -28,7 +29,8 @@ class HomeController extends Controller
        $user = User::find($userId);
 
        if ($user->isAdmin == 1) {
-         return view('admin');
+         $orders = DB::table('orders')->latest()->get();
+         return view('admin', compact('orders'));
        }
         return view('user');
     }
