@@ -9,11 +9,11 @@
 </p>
 <p>Item: 
 @if ( session('item') == 1)
-Rock Buddies
+{{ "Rock Buddies" }}
 @elseif ( session('item') == 2)
-Item 2
+{{ "Best Friend Rocks" }}
 @elseif ( session('item') == 3)
-Item 3
+{{ "Custom Rocks" }}
 @endif
 
 </p>
